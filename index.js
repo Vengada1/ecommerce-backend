@@ -8,7 +8,11 @@ const cors = require("cors");
 const port = process.env.PORT || 4000;
 
 app.use(express.json());
-app.use(cors());
+const allowedOrigins = ['https://shoppkartfe.netlify.app']; // Replace with your actual frontend URL
+app.use(cors({
+  origin: allowedOrigins,
+  credentials: true // If needed
+}));
 
 // Database Connection With MongoDB
 mongoose.connect("mongodb+srv://venkatnathan10:Varadhan1@cluster0.zqwcx.mongodb.net/e-commerce");
