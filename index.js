@@ -8,7 +8,7 @@ const cors = require("cors");
 const port = process.env.PORT || 4000;
 
 app.use(express.json());
-const allowedOrigins = ['https://shoppkartfe.netlify.app','https://shopakrtadmin.netlify.app/']; // Replace with your actual frontend URL
+const allowedOrigins = ['https://shoppkartfe.netlify.app','https://shopakrtadmin.netlify.app']; // Replace with your actual frontend URL
 app.use(cors({
   origin: allowedOrigins,
   credentials: true // If needed
